@@ -1,0 +1,55 @@
+<div  class="home">
+  <div class="row  lighten-2">
+    <div class="colo">
+      <div class="fondo">
+            <img src="./assets/pngwing.com.png" id="imagen-logo" alt="logo-temp">
+      </div>
+      <div class="col s12" style="text-align: center;">
+        <div class="carousel" style="width: 90%; max-width: none; height: 500px; margin: 10 auto; position: relative; bottom: 9rem;">
+          <a class="carousel-item" href="#one!">
+            <img src="https://s3.us-east-1.amazonaws.com/contenido.ipos/fotos/866/producto/a7989cd5e8034e809fc24b1c2e6f52ab_29072020042518.jpg" style="width: 300px; height: 300px;">
+          </a>
+          <a class="carousel-item" href="#two!">
+            <img src="https://masferre.com/imagen?img=39048_1.jpg" style="width: 300px; height: 300px;">
+          </a>
+          <a class="carousel-item" href="#three!">
+            <img src="https://sumerlabs.com/default/image-tool-lambda?new-width=64&new-height=64&new-quality=80&url-image=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fsumer-app-90b8f.appspot.com%2Fo%2Fprofile_photos%252F5de6c30224a2d97b542740d41148f3be%252Fa67884c0-8712-11ec-91c9-8f55ba03fa2c%3Falt%3Dmedia%26token%3D9e147252-ab51-470a-b053-6f87446aaaeb" style="width: 300px; height: 300px;">
+          </a>
+          <a class="carousel-item" href="#four!">
+            <img src="https://rogonsa.com.mx/wp-content/uploads/2022/12/pinturas.jpg" style="width: 300px; height: 300px;">
+          </a>
+          <a class="carousel-item" href="#three!">
+            <img src="https://sumerlabs.com/default/image-tool-lambda?new-width=64&new-height=64&new-quality=80&url-image=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fsumer-app-90b8f.appspot.com%2Fo%2Fprofile_photos%252F5de6c30224a2d97b542740d41148f3be%252Fa67884c0-8712-11ec-91c9-8f55ba03fa2c%3Falt%3Dmedia%26token%3D9e147252-ab51-470a-b053-6f87446aaaeb" style="width: 300px; height: 300px;">
+          </a>
+          <a class="carousel-item" href="#four!">
+            <img src="https://rogonsa.com.mx/wp-content/uploads/2022/12/pinturas.jpg" style="width: 300px; height: 300px;">
+          </a>
+        </div>
+      </div>
+      
+    
+        <div class="row">
+            <div class="col s12">
+              <h1 id="titulo">Catálogo de Productos</h1>
+            </div>
+          
+            <div class="col s12 m6 l4" *ngFor="let producto of catalogoProductos">
+              <div class="card">
+                <div class="card-image">
+                  <img [src]="producto.imagen" alt="{{producto.nombre}}">
+                  <span class="card-title">{{producto.nombre}}</span>
+                </div>
+                <div class="card-content">
+                  <p>{{producto.descripcion}}</p>
+                  <p>Precio: {{producto.precio}}</p>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="btn" (click)="agregarAlCarrito(producto)">Agregar al carrito</a> <!-- Modificado -->
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>      
+</div>
+</div>
+
